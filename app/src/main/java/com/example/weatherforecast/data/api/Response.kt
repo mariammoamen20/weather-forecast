@@ -1,5 +1,6 @@
 package com.example.weatherforecast.data.api
 
+import com.example.weatherforecast.data.api.local.City
 import com.google.gson.annotations.SerializedName
 
 data class Response(

@@ -3,8 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Route/Android/my_projcts/Weather_Forecast_App/app/src/main/res/drawable-anydpi/ic_cloud.xml" value="0.1535" />
+        <entry key="..\:/Route/Android/my_projcts/Weather_Forecast_App/app/src/main/res/drawable-anydpi/ic_wind.xml" value="0.1535" />
+        <entry key="..\:/Route/Android/my_projcts/Weather_Forecast_App/app/src/main/res/drawable-v24/_01d.xml" value="0.1" />
+        <entry key="..\:/Route/Android/my_projcts/Weather_Forecast_App/app/src/main/res/drawable-v24/ic_broken_image.xml" value="0.1" />
+        <entry key="..\:/Route/Android/my_projcts/Weather_Forecast_App/app/src/main/res/drawable/custom_hourly_item.xml" value="0.1535" />
+        <entry key="..\:/Route/Android/my_projcts/Weather_Forecast_App/app/src/main/res/font/font.xml" value="0.22564102564102564" />
         <entry key="..\:/Route/Android/my_projcts/Weather_Forecast_App/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Route/Android/my_projcts/Weather_Forecast_App/app/src/main/res/layout/daily_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route/Android/my_projcts/Weather_Forecast_App/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Route/Android/my_projcts/Weather_Forecast_App/app/src/main/res/layout/fragmenthome.xml" value="0.18385416666666668" />
+        <entry key="..\:/Route/Android/my_projcts/Weather_Forecast_App/app/src/main/res/layout/hourly_item.xml" value="0.203125" />
       </map>
     </option>
   </component>
