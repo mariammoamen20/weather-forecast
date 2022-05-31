@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">weatherforecast</string>
-    <string name="pressure">Pressure: %dmbar</string>
+    <string name="pressure">Pressure</string>
     <string name="today">Today</string>
+    <string name="humidity">Humidity</string>
+    <string name="cloud">Cloud</string>
 
 </resources>

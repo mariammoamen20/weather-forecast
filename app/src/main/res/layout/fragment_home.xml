@@ -19,7 +19,7 @@
             android:id="@+id/home_card_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_margin="13dp"
             app:cardBackgroundColor="#91afd9"
             app:cardCornerRadius="8dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,7 @@
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="current_date" />
+                    tools:text="@{item.dt.toString()}" />
 
                 <TextView
                     android:id="@+id/current_time_text"
@@ -49,7 +49,7 @@
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/current_date_text"
-                    tools:text="3.00" />
+                    tools:text="@{item.dt.toString()}" />
 
                 <TextView
                     android:id="@+id/get_location_text"
@@ -84,7 +84,7 @@
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/time_zone_text"
-                    tools:text="50" />
+                    android:text="@{item.temp.toString()}" />
 
                 <TextView
                     android:id="@+id/current_description"
@@ -94,7 +94,7 @@
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/current_temperature_text"
-                    tools:text="sunny" />
+                    tools:text="@{item.weather.get(0).description}" />
 
                 <ImageView
                     android:id="@+id/current_image"
@@ -102,7 +102,7 @@
                     android:layout_height="90dp"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/_01d"
+                    android:src="@drawable/_02d"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -114,9 +114,9 @@
             android:id="@+id/parent_linear_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="13dp"
             android:orientation="vertical"
-            android:padding="7dp"
+            android:padding="9dp"
             android:weightSum="2"
             android:elevation="5dp"
             android:background="@drawable/custom_linear_layout"
@@ -130,40 +130,54 @@
                 android:layout_height="wrap_content"
                 android:weightSum="4">
 
-                <ImageView
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:src="@drawable/icons_humidity"
-
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="12sp"
+                    android:text="@string/humidity"
                     />
 
-                <ImageView
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:src="@drawable/icons_wind"
-
+                    android:text="wind speed"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="12sp"
                     />
 
-                <ImageView
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/pressure"
                     android:src="@drawable/icons_pressure"
-
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="12sp"
                     />
 
-                <ImageView
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:src="@drawable/ic_cloud"
-
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:text="@string/cloud"
                     />
             </LinearLayout>
 
@@ -179,7 +193,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="12sp"
+                    android:textSize="10sp"
                     android:fontFamily="@font/poppins_regular"
                     android:textColor="@color/black"
                     tools:text="20" />
@@ -190,7 +204,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="12sp"
+                    android:textSize="10sp"
                     android:fontFamily="@font/poppins_regular"
                     android:textColor="@color/black"
                     tools:text="20"
@@ -203,7 +217,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="12sp"
+                    android:textSize="10sp"
                     android:fontFamily="@font/poppins_regular"
                     android:textColor="@color/black"
                     tools:text="20"
@@ -216,7 +230,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="12sp"
+                    android:textSize="10sp"
                     android:fontFamily="@font/poppins_regular"
                     android:textColor="@color/black"
                     tools:text="20"
@@ -232,7 +246,7 @@
             app:layout_constraintTop_toBottomOf="@id/parent_linear_layout"
             app:layout_constraintStart_toStartOf="parent"
             android:text="@string/today"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="15dp"
             android:layout_marginStart="10dp"
             android:textColor="@color/black"
             android:textStyle="bold"
